@@ -1,0 +1,50 @@
+Requirements
+- This application must be available offline. (Done)
+- A refresh button allows the user to update its accounts. (Done)
+- Access to the application is restricted. (Done)
+- Exchanges with API must be secure (with TLS) (Done)
+
+1) Explain how you ensure user is the right one starting the app : 
+To ensure that the user starting the application is the right, we do a double authentication. 
+In fact, it is a mobile application, so, the first authentication is with the fingerprint registered of the mobile phone. 
+Then, the user has to put his informations (name, last name) to do the second authentication. 
+When he puts his informations, it will check if they are correct, and if it is the case, the user can finally access to the differents accounts.
+
+2) How do you securely save user's data on your phone ?
+We use the library Retrofit to make the API calling, and this library provide cache mechanism, by using it, the cache data is keeping into our application. So, when we will make any API call when our application is offline, the Retrofit cache data will be retrieve and will show the data to the user. 
+Moreover, we add SharedPreferences to store the data (the bank accounts and the users). It is automatically set with the mode "MODE_PRIVATE" constant that means that the data can only be accessed by our application. By this way, the data is securely stored.
+
+3) How did you hide the API url ?
+First, how we connect to our API url ? For this, we use retrofit (it is a type-safe HTTP client for Android and Java), it allows to turn our HTTP API into a Java interface and then we can provide the request method (GET, POST, PUT, ...) and relative URL (here /config/{id}, /accounts, ...) that we want. 
+But in this case, we only have an HTTP connection and not a secure HTTP. So, to secure the connection to our API (and by the way, hide the API url), we will add the protocol SSL/TLS.
+For that, we use OkHttp that allows to have the connectivity to as many hosts as possible and mostly the security of the connection (by verificate the remote webserver with certificates) and the privacy of data exchanged with strong ciphers.
+We use SSLContext that we implement with the specified secure socket protocol "TLS" and then that we initialize with an optional set of key (here key = null) and trust managers (here X509 certificates) and source of secure random bytes (here we use SecureRandom() that construct a secure random number with a random number algorithm).
+After that, we use SSLSocketFactory to tunnel SSL through a proxy/or negotiate the use of SSL over an existing socket (here the sslContext).
+And we create the OkHttp to exchange data in a secure way thanks to the SSL protocol.
+To put it in simple terms, we create a client with OkHttp and we add to it the TLS/SSL protocol to secure our communications by ciphering the data exchanged (with algorithms, certificates, ...).
+
+4) Screenshots of your application
+- MainActivity : 
+The MainActivity is the first step to access to the application by logging with our fingerprint registered on our device.
+
+
+- Login : 
+The Login is the second step to access to the application by putting our "Name" and "Last name" to log into the application.
+
+- AccountDetails : 
+Different types of accounts: 
+1) Savings account
+It has differents informations (fees savings, account limit = lower limit of money) and it has different functions (withdraw to withdraw money, deposit to deposit money).
+
+2) Checking account
+It has differents informations (fees checking, account limit = upper limit of money to withdraw) and it has different functions (withdraw to withdraw money, deposit to deposit money).
+
+3) Credit Card account
+It has differents informations (interest charges, account limit w = upper limit of money to withdraw, account limit p = upper limit of money when purchasing something) and it has different functions (withdraw to withdraw money, deposit to deposit money, purchase to purchase something, transfer to transfer money to someone).
+
+4) Personal Loan account
+It has differents informations (interest rates charges, loan amount = the amount to refund) and it has different functions (withdraw to withdraw money, deposit to deposit money, payback to refund the loan).
+
+- AddBankAccount : 
+The AddBankAccount allows to add a bank account by entering the differents informations (IBAN, type of account, the currency), the amount of money of the account will be set to 0 by default.
+
