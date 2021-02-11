@@ -23,28 +23,4 @@ After that, we use SSLSocketFactory to tunnel SSL through a proxy/or negotiate t
 And we create the OkHttp to exchange data in a secure way thanks to the SSL protocol.
 To put it in simple terms, we create a client with OkHttp and we add to it the TLS/SSL protocol to secure our communications by ciphering the data exchanged (with algorithms, certificates, ...).
 
-4) Screenshots of your application
-- MainActivity : 
-The MainActivity is the first step to access to the application by logging with our fingerprint registered on our device.
-
-
-- Login : 
-The Login is the second step to access to the application by putting our "Name" and "Last name" to log into the application.
-
-- AccountDetails : 
-Different types of accounts: 
-1) Savings account
-It has differents informations (fees savings, account limit = lower limit of money) and it has different functions (withdraw to withdraw money, deposit to deposit money).
-
-2) Checking account
-It has differents informations (fees checking, account limit = upper limit of money to withdraw) and it has different functions (withdraw to withdraw money, deposit to deposit money).
-
-3) Credit Card account
-It has differents informations (interest charges, account limit w = upper limit of money to withdraw, account limit p = upper limit of money when purchasing something) and it has different functions (withdraw to withdraw money, deposit to deposit money, purchase to purchase something, transfer to transfer money to someone).
-
-4) Personal Loan account
-It has differents informations (interest rates charges, loan amount = the amount to refund) and it has different functions (withdraw to withdraw money, deposit to deposit money, payback to refund the loan).
-
-- AddBankAccount : 
-The AddBankAccount allows to add a bank account by entering the differents informations (IBAN, type of account, the currency), the amount of money of the account will be set to 0 by default.
-
+4) Screenshots of your application (See the pdf file in the repository)
