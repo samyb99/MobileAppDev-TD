@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddBankAccount">
+
+    <EditText
+        android:id="@+id/currencyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter your currency..."
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="84dp" />
+
+    <EditText
+        android:id="@+id/ibanText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter your iban..."
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="162dp" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose one of the following account type : "
+        android:gravity="center"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="229dp" />
+    <RadioGroup
+        android:id="@+id/choiceOfType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="262dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonSavings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Savings"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="293dp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonChecking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Checking"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="293dp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCreditCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Credit Card"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="293dp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPersonalLoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Personal Loan"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="293dp" />
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/buttonAddNewAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD NEW ACCOUNT"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="598dp"
+        android:onClick="createNewAccount"/>
+</LinearLayout>

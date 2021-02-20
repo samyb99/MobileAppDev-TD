@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountDetails2">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-65dp"
+        tools:layout_editor_absoluteY="-75dp">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/nameUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Name User" />
+
+            <TextView
+                android:id="@+id/lastNameUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Last name" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ID" />
+
+            <TextView
+                android:id="@+id/row_AccountID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ID" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Account Name" />
+
+            <TextView
+                android:id="@+id/row_AccountName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Account Name" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Account Type" />
+
+            <TextView
+                android:id="@+id/row_AccountType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Account Type" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Amount" />
+
+            <TextView
+                android:id="@+id/row_AccountAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Amount" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="IBAN" />
+
+            <TextView
+                android:id="@+id/row_AccountIBAN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="IBAN" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Currency" />
+
+            <TextView
+                android:id="@+id/row_Currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Currency" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/row_loan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Loans" />
+            <TextView
+                android:id="@+id/row_loanToRefund"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Loans" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/row_FeesS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fee(s)" />
+            <TextView
+                android:id="@+id/row_FeesSaving"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fee(s)" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/row_FeesC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fee(s)" />
+            <TextView
+                android:id="@+id/row_FeesCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fee(s)" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/row_interestR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Interest rates" />
+            <TextView
+                android:id="@+id/row_interestRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Interest rates" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/row_interestC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Interest charges" />
+            <TextView
+                android:id="@+id/row_interestCharge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Interest charges" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/row_upperL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Upper limit" />
+            <TextView
+                android:id="@+id/row_upperLimit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Upper limit" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/row_upperLP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Upper limit (purchase)" />
+            <TextView
+                android:id="@+id/row_upperLimitP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Upper limit (purchase)" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/row_lowerL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lower limit" />
+            <TextView
+                android:id="@+id/row_lowerLimit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lower limit" />
+        </TableRow>
+        <Button
+            android:id="@+id/btnDeposit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deposit"
+            android:onClick="depositMoney"
+            />
+        <Button
+            android:id="@+id/btnWithdraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Withdrawal"
+            android:onClick="withdrawMoney"
+            />
+        <Button
+            android:id="@+id/btnPurchase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Purchase"
+            android:onClick="purchaseSmtg"
+            />
+        <Button
+            android:id="@+id/btnTransfer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transfer"
+            android:onClick="transferMoney"
+            />
+        <Button
+            android:id="@+id/btnPayBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay back"
+            android:onClick="payBackMoney"
+            />
+
+        <Button
+            android:id="@+id/btnPrevious"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Previous account"
+            android:onClick="prevAccount"
+            />
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Next account"
+            android:onClick="nextAccount"/>
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Account n° : "/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pageNum"
+            android:text="0"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="/"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lastPage"
+            android:text="4"/>
+        </TableRow>
+        <Button
+            android:id="@+id/btnAddAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add account"
+            android:onClick="addAccount"/>
+
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
