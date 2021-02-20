@@ -12,9 +12,7 @@ public abstract class BankAccount implements Serializable {
     private double amount;
     private String iban;
     private String currency;
-    //Dois ton pouvoir se connecter sur l'app avec un compte bancaire ?
-//From Olivier CROS to Everyone:  06:05 PM
-//Non, vous ne devez spécifier que l'ID
+
     public BankAccount(int id, String accountName, double amount, String iban, String currency)
     {
         this.id = id;

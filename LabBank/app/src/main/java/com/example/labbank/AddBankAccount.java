@@ -59,7 +59,7 @@ public class AddBankAccount extends AppCompatActivity {
         bankAccountRequest.setAmount(0);
         //Check the account type
         if (accountType ==0){
-            bankAccountRequest.setAccountName("Saving Account");
+            bankAccountRequest.setAccountName("Savings Account");
         }
         else if (accountType == 1){
             bankAccountRequest.setAccountName("Checking Account");

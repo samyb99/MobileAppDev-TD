@@ -12,17 +12,17 @@ import retrofit2.http.Path;
 
 public interface UserService {
 
-    @POST("Users/")
-    Call<LoginResponse> userLogin(@Body LoginRequest loginRequest);
+    //@POST("Users/")
+    //Call<LoginResponse> userLogin(@Body LoginRequest loginRequest);
 
     @GET("Users/")
     Call<List<LoginResponse>> checkUser();
 
-    @POST("Users/")
-    Call<LoginResponse> checkLogin(@Header("Authorization") String authToken);
+    //@POST("Users/")
+    //Call<LoginResponse> checkLogin(@Header("Authorization") String authToken);
 
-    @GET("accounts/{id}")
-    Call<BankAccountResponse> getAccount(@Path("id") int id);
+    //@GET("accounts/{id}")
+    //Call<BankAccountResponse> getAccount(@Path("id") int id);
 
     @GET("accounts")
     Call<List<BankAccountResponse>> getAccounts();
