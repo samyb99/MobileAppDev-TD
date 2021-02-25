@@ -25,6 +25,7 @@ public class AddBankAccount extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //We put the different informations of the account that we have to set.
         setContentView(R.layout.activity_add_bank_account);
         ibanTxt = findViewById(R.id.ibanText);
         currencyTxt = findViewById(R.id.currencyText);
@@ -36,6 +37,7 @@ public class AddBankAccount extends AppCompatActivity {
             }
         });
         btnAddAcc = findViewById(R.id.buttonAddNewAccount);
+        //Button to add the account
         btnAddAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +55,7 @@ public class AddBankAccount extends AppCompatActivity {
     }
 
     public void addNewAccount(){
+        //We set the differents informations and then go to the page account details.
         BankAccountRequest bankAccountRequest = new BankAccountRequest();
         bankAccountRequest.setCurrency(currencyTxt.getText().toString());
         bankAccountRequest.setIban(ibanTxt.getText().toString());

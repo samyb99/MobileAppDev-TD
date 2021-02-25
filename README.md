@@ -1,3 +1,11 @@
+The project is in the folder "LabBank". In this folder, if you want to see the files about:
+- Gradle properties and the implementations : LabBank -> app -> build.gradle | url = https://github.com/samyb99/MobileAppDev-TD/blob/master/LabBank/app/build.gradle
+- AndroidManifest.xml : LabBank -> app -> src -> main -> AndroidManifest.xml | url = https://github.com/samyb99/MobileAppDev-TD/blob/master/LabBank/app/src/main/AndroidManifest.xml
+- The java classes : LabBank -> app -> src -> main -> java/com/example/labbank | url = https://github.com/samyb99/MobileAppDev-TD/tree/master/LabBank/app/src/main/java/com/example/labbank
+- The layout xml : LabBank -> app -> src -> main -> res -> layout | url = https://github.com/samyb99/MobileAppDev-TD/tree/master/LabBank/app/src/main/res/layout
+
+My application apk : 
+
 Requirements
 - This application must be available offline. (Done)
 - A refresh button allows the user to update its accounts. (Done)
@@ -6,7 +14,7 @@ Requirements
 
 1) Explain how you ensure user is the right one starting the app : 
 To ensure that the user starting the application is the right, we do a double authentication. 
-In fact, it is a mobile application, so, the first authentication is with the fingerprint registered of the mobile phone. 
+In fact, it is a mobile application, so, the first authentication is with the fingerprint registered of the mobile phone. Don't forget to register a fingerprint if you don't already have it on your phone else you couldn't access to the application.
 Then, the user has to put his informations (name, last name) to do the second authentication. 
 When he puts his informations, it will check if they are correct, and if it is the case, the user can finally access to the differents accounts.
 

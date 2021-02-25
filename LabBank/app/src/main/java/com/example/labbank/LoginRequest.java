@@ -1,7 +1,7 @@
 package com.example.labbank;
 
 public class LoginRequest {
-
+    //When we send a request to check the account, we use loginrequest
     private String name;
     private String lastname;
 

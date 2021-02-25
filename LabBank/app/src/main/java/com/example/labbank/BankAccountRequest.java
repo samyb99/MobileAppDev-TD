@@ -1,6 +1,7 @@
 package com.example.labbank;
 
 public class BankAccountRequest {
+    //When we send a request to check the account, we use bankaccountrequest
     private String accountName;
     private double amount;
     private String iban;

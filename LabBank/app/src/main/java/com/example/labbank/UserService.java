@@ -12,24 +12,19 @@ import retrofit2.http.Path;
 
 public interface UserService {
 
-    //@POST("Users/")
-    //Call<LoginResponse> userLogin(@Body LoginRequest loginRequest);
-
-    @GET("Users/")
+    //To check the user when logging
+    @GET("config/")
     Call<List<LoginResponse>> checkUser();
 
-    //@POST("Users/")
-    //Call<LoginResponse> checkLogin(@Header("Authorization") String authToken);
-
-    //@GET("accounts/{id}")
-    //Call<BankAccountResponse> getAccount(@Path("id") int id);
-
+    //To get the different accounts
     @GET("accounts")
     Call<List<BankAccountResponse>> getAccounts();
 
+    //To add an account
     @POST("accounts/")
     Call<BankAccountResponse> addAccount(@Body BankAccountRequest bankAccountRequest);
 
+    //To update an account (when withdrawal, deposit, ...)
     @PUT("accounts/{id}")
     Call<BankAccountResponse> putAccount(@Path("id") int id, @Body BankAccountRequest bankAccountRequest);
 }

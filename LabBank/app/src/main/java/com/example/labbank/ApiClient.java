@@ -15,6 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiClient {
 
     private static Retrofit getRetrofit(){
+        //We set the connexion via Retrofit and OkHttpClient with certificates trusted and SSL/TLS protocol to keep it safe.
         final OkHttpClient client;
         SSLSocketFactory sslSocketFactory;
         try {
@@ -44,7 +45,7 @@ public class ApiClient {
 
             Retrofit retrofit = new Retrofit.Builder()
                     .addConverterFactory(GsonConverterFactory.create())
-                    .baseUrl("https://601d0fbfbe5f340017a190e1.mockapi.io/bankaccount/")
+                    .baseUrl("https://60102f166c21e10017050128.mockapi.io/labbbank/")
                     .client(client)
                     .build();
 

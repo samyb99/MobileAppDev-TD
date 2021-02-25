@@ -1,7 +1,7 @@
 package com.example.labbank;
 
 public class LoginResponse {
-
+    //When we get a response to check the accounts, we use loginresponse
     private int user_id;
     private String name;
     private String lastname;

@@ -1,6 +1,7 @@
 package com.example.labbank;
 
 public class BankAccountResponse {
+    //When we get a response, we use bankaccountresponse to retrieve the data
     private int id;
     private String accountName;
     private double amount;

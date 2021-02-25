@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView msg_txt = findViewById(R.id.txt_msg);
         Button login_btn = findViewById(R.id.login_btn);
-
+        //We define the fingerprint and check the different cases
         BiometricManager biometricManager = BiometricManager.from(this);
         switch(biometricManager.canAuthenticate()){
             case BiometricManager.BIOMETRIC_SUCCESS:
@@ -73,10 +73,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    //public void toLogin(View view){
-    //    Intent intent = new Intent(MainActivity.this, Login.class);
-    //    startActivity(intent);
-    //}
-
 }

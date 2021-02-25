@@ -29,11 +29,11 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        //We define the name, last name and so on to login.
         name = findViewById(R.id.edName);
         lastname = findViewById(R.id.edLastName);
         btnLogin = findViewById(R.id.btnLogin);
-
+        //Button to login
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

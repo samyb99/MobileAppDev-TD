@@ -31,6 +31,7 @@ public class AccountDetails2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_details);
+        //We retrieve everything to put the informations dependably on the account
         nameU = findViewById(R.id.nameUser);
         lastNameU = findViewById(R.id.lastNameUser);
         pageNumero = findViewById(R.id.pageNum);
@@ -62,9 +63,11 @@ public class AccountDetails2 extends AppCompatActivity {
         btnN = findViewById(R.id.btnNext);
         btnP = findViewById(R.id.btnPrevious);
         btnN = (Button)findViewById(R.id.btnNext);
+        //We create the action when we click on the button next to see the next account
         btnN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //We modify the number of the page and get the account
                 int pageNumeroInt = Integer.parseInt(pageNumero.getText().toString());
                 ApiClient apiClient = new ApiClient();
                 jsonPlaceHolderApi = apiClient.getUserService();
@@ -78,9 +81,11 @@ public class AccountDetails2 extends AppCompatActivity {
                 }
             }});
         btnP = (Button)findViewById(R.id.btnPrevious);
+        //We create the action when we click on the button previous to see the previous account
         btnP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //We modify the number of the page and get the account
                 int pageNumeroInt = Integer.parseInt(pageNumero.getText().toString());
                 ApiClient apiClient = new ApiClient();
                 jsonPlaceHolderApi = apiClient.getUserService();
@@ -94,10 +99,12 @@ public class AccountDetails2 extends AppCompatActivity {
                 }
             }
         });
+        //We start with the account 0.
         getAccounts(0);
 
     }
 
+    //To show all the informations about the account, the fee, the iban, currency, account name... dependably on the account
     private void showInfo(BankAccountResponse bankAccountResponse){
         idAccount.setText(String.valueOf(bankAccountResponse.getId()));
         typeAccount.setText(bankAccountResponse.getAccountName());
@@ -222,17 +229,11 @@ public class AccountDetails2 extends AppCompatActivity {
 
     private void getAccounts(int numeroAcc) {
         int pageNumeroInt = Integer.parseInt(pageNumero.getText().toString());
-        //OFFLINE GSON
-        //SharedPreferences mPrefs = getPreferences(MODE_PRIVATE);
-        //Gson gson = new Gson();
-        //String json = mPrefs.getString("Bank accounts", "");
-        //List<BankAccountResponse> bankAccounts = (List<BankAccountResponse>) gson.fromJson(json, BankAccountResponse.class);
-        //showInfo(bankAccounts.get(numeroAcc));
-
         //API CLIENT (WITH TLS)
         ApiClient apiClient = new ApiClient();
         jsonPlaceHolderApi = apiClient.getUserService();
         Call<List<BankAccountResponse>> call = jsonPlaceHolderApi.getAccounts();
+        //We set the action to see the specific account.
         call.enqueue(new Callback<List<BankAccountResponse>>() {
             @Override
             public void onResponse(Call<List<BankAccountResponse>> call, Response<List<BankAccountResponse>> response) {
@@ -267,11 +268,13 @@ public class AccountDetails2 extends AppCompatActivity {
         });
     }
 
+    //We go to the page for adding account
     public void addAccount(View view){
         Intent intent = new Intent(AccountDetails2.this, AddBankAccount.class);
         startActivity(intent);
     }
 
+    //We create the function deposit for the button "Deposit"
     public void depositMoney(View view) {
         int idAccount = Integer.parseInt(pageNumero.getText().toString())+1;
         String accountType = typeAccount.getText().toString();
@@ -332,8 +335,7 @@ public class AccountDetails2 extends AppCompatActivity {
         //FINISH SETTING AMOUNT
     }
 
-
-
+    //We create the function withdrawMoney for the button "Withdraw"
     public void withdrawMoney(View view){
         int idAccount = Integer.parseInt(pageNumero.getText().toString())+1;
         String accountType = typeAccount.getText().toString();
@@ -396,6 +398,7 @@ public class AccountDetails2 extends AppCompatActivity {
         dialog.show();
     }
 
+    //We create the function purchaseSmtg for the button "Purchase"
     public void purchaseSmtg(View view){
         int idAccount = Integer.parseInt(pageNumero.getText().toString())+1;
         String accountType = typeAccount.getText().toString();
@@ -454,7 +457,7 @@ public class AccountDetails2 extends AppCompatActivity {
         dialog.show();
     }
 
-
+    //We create the function payBackMoney for the button "Payback"
     public void payBackMoney(View view){
         int idAccount = Integer.parseInt(pageNumero.getText().toString())+1;
         String accountType = typeAccount.getText().toString();
@@ -513,6 +516,7 @@ public class AccountDetails2 extends AppCompatActivity {
         dialog.show();
     }
 
+    //We create the function transferMoney for the button "Transfer"
     public void transferMoney(View view) {
         int idAccount = Integer.parseInt(pageNumero.getText().toString())+1;
         String accountType = typeAccount.getText().toString();
