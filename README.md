@@ -4,7 +4,7 @@ The project is in the folder "LabBank". In this folder, if you want to see the f
 - The java classes : LabBank -> app -> src -> main -> java/com/example/labbank | url = https://github.com/samyb99/MobileAppDev-TD/tree/master/LabBank/app/src/main/java/com/example/labbank
 - The layout xml : LabBank -> app -> src -> main -> res -> layout | url = https://github.com/samyb99/MobileAppDev-TD/tree/master/LabBank/app/src/main/res/layout
 
-My application apk : 
+My application apk : https://github.com/samyb99/MobileAppDev-TD/blob/master/labbank.apk
 
 Requirements
 - This application must be available offline. (Done)
