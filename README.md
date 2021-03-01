@@ -21,6 +21,7 @@ When he puts his informations, it will check if they are correct, and if it is t
 2) How do you securely save user's data on your phone ?
 We use the library Retrofit to make the API calling, and this library provide cache mechanism, by using it, the cache data is keeping into our application. So, when we will make any API call when our application is offline, the Retrofit cache data will be retrieve and will show the data to the user. 
 Moreover, we add SharedPreferences to store the data (the bank accounts and the users). It is automatically set with the mode "MODE_PRIVATE" constant that means that the data can only be accessed by our application. By this way, the data is securely stored.
+And also, to secure a bit more our app, we add shrinking and obfuscating into our app to remove unused code and resources by shortening the names of our classes of the application and also the members. 
 
 3) How did you hide the API url ?
 First, how we connect to our API url ? For this, we use retrofit (it is a type-safe HTTP client for Android and Java), it allows to turn our HTTP API into a Java interface and then we can provide the request method (GET, POST, PUT, ...) and relative URL (here /config/{id}, /accounts, ...) that we want. 
